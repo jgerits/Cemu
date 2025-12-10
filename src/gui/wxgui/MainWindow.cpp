@@ -442,7 +442,7 @@ wxString MainWindow::GetInitialWindowTitle()
 
 void MainWindow::OnClose(wxCloseEvent& event)
 {
-	wxTheClipboard->Flush();
+	// wxTheClipboard->Flush();
 
 	if(m_game_list)
 		m_game_list->OnClose(event);

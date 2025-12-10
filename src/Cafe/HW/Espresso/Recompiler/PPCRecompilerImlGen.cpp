@@ -2456,7 +2456,10 @@ bool PPCRecompiler_decodePPCInstruction(ppcImlGenContext_t* ppcImlGenContext)
 			if (PPCRecompilerImlGen_LSWI(ppcImlGenContext, opcode) == false)
 				unsupportedInstructionFound = true;
 			break;
-		case 598:
+		case 598: // SYNC
+			PPCRecompilerImlGen_SYNC(ppcImlGenContext, opcode);
+			break;
+		case 854: // EIEIO
 			PPCRecompilerImlGen_SYNC(ppcImlGenContext, opcode);
 			break;
 		case 599: // LFDX
